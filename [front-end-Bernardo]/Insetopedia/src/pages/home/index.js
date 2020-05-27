@@ -45,6 +45,7 @@ import imgAnimaisS from '../../icones/7-menu2/10-background-animais.png';
 
 import { ScrollView } from 'react-native-gesture-handler';
 
+
 export default function App() {
   const [modalVisibleInicial, setModalVisibleInicial] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -138,7 +139,7 @@ export default function App() {
           <Text>{`\n\tOutro apêndice ambulatório que pode estar presente são as asas. Ao contrário das pernas, nem todo inseto apresenta asas, quando tem, obrigatoriamente é na fase adulta. Quando presente, os pares de asas estão localizados no mesotórax e metatórax, podendo ser os dois pares funcionais, a exemplo das borboletas, ou ter um dos dois pares atrofiados, como ocorre com as moscas (par metatorácico atrofiado) ou com machos de`} <Text style={styles.textBold}>Strepsiptera</Text> {`(par mesotorácico atrofiado). O formato`}</Text></Text>  
         : valor === 4 ? 
           <Text>O terceiro seguimento do corpo do inseto é constituído por vários “anéis” denominados de <Text style={styles.textBold}urômeros></Text>. Normalmente os insetos apresentam de 9 a 10 urômeros, mas, em alguns casos, podem ter até 12. O abdome é um seguimento com simplificação de estruturas externas, porém altamente especializada, sendo móvel e flexível. Lateralmente, principalmente nos urômeros I a VIII, estão localizados os <Text style={styles.textBold}>espiráculos</Text>. A junção deste seguimento com o tórax classifica-o nos tipos <Text style={styles.textBold}>livre</Text>, <Text style={styles.textBold}>pedunculado</Text> ou <Text style={styles.textBold}>séssil</Text>. Algumas outras estruturas que podem estar presentes no abdome são: <Text style={styles.textBold}>estilos abdominais</Text>, <Text style={styles.textBold}>filamentos caudais</Text>, <Text style={styles.textBold}>filamento mediano</Text>, <Text style={styles.textBold}>cercos</Text>, <Text style={styles.textBold}>estilos terminais</Text>, <Text style={styles.textBold}>sifúnculos</Text>, <Text style={styles.textBold}>glândulas odoríferas</Text>, <Text style={styles.textBold}>tímpano</Text>, <Text style={styles.textBold}>órgão estridulatório</Text> e <Text style={styles.textBold}>ovipositor</Text>.</Text> 
-        : <Text>Alert.alert("Erro", "Ocorreu um erro imprevisto") </Text>
+        : <Text>Alert.alert("Erro", "Ocorreu um erro imprevisto.") </Text>
       )
     }
 
