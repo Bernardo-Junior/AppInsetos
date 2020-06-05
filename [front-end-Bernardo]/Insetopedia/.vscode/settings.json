@@ -1,0 +1,8 @@
+{
+    "window.zoomLevel": 0,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.renderLineHighlight": "gutter"
+}

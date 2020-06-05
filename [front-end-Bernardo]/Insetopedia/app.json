@@ -23,6 +23,10 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.lab312.Insetopedia",
+      "versionCode": 1
     }
   }
 }
