@@ -24,7 +24,7 @@ export default function Routes() {
                         if (route.name === 'Home') {
                             iconName = focused ? 'ios-home' : 'ios-home';
                           }  else {
-                            iconName = focused ? 'md-help-circle-outline' : 'md-help-circle-outline';
+                            iconName = focused ? 'ios-information-circle-outline' : 'ios-information-circle-outline';
                           }
                           // You can return any component that you like here!
                           return <Ionicons name={iconName} size={25} color={color} />;

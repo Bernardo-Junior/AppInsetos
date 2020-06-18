@@ -15,15 +15,30 @@ export default StyleSheet.create({
     },
     header: {
         height: hp('11%'),
-        backgroundColor: '#A7CE03'
+        backgroundColor: '#7EC24D'
     },
     headerVivem: {
         height: hp('11%'),
         backgroundColor: '#A7CE03'
     },
-    headerModal: {
+    headerModalReconhecer: {
+        height: hp('8%'),
+        backgroundColor: '#6456FF',
+        justifyContent: 'center',
+    },
+    headerModalOndeVivem: {
         height: hp('8%'),
         backgroundColor: '#7EC24D',
+        justifyContent: 'center',
+    },
+    headerModalMaisComuns: {
+        height: hp('8%'),
+        backgroundColor: '#cc0066',
+        justifyContent: 'center',
+    },
+    headerModalImportancia: {
+        height: hp('8%'),
+        backgroundColor: '#A7CE03',
         justifyContent: 'center',
     },
     boxTextHeaderModal: {
@@ -127,7 +142,7 @@ export default StyleSheet.create({
         
     },
     textOpcao3: {
-        color: '#FE2F5D',
+        color: '#cc0066',
         fontSize: hp('2.5%'),
         fontWeight: 'bold',
         

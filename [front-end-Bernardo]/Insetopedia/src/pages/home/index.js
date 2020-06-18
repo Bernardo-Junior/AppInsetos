@@ -57,6 +57,18 @@ import piolho from '../../icones/8-menu3/piolho.png'
 import poeamesa from '../../icones/8-menu3/poe-a-mesa.png'
 import pulga from '../../icones/8-menu3/pulga.png'
 
+import ecologicaP from '../../icones/9-menu/ecologica.png';
+import ecologicaS from '../../icones/9-menu/ecologica2.png';
+import medicaP from '../../icones/9-menu/medica.png';
+import medicaS from '../../icones/9-menu/medica2.png';
+import veterinariaP from '../../icones/9-menu/veterinaria.png';
+import veterinariaS from '../../icones/9-menu/veterinaria2.png';
+import agricolaP from '../../icones/9-menu/agricola.png';
+import agricolaS from '../../icones/9-menu/agricola2.png';
+import forenseP from '../../icones/9-menu/forense.png';
+import forenseS from '../../icones/9-menu/forense2.png';
+
+
 import { ScrollView } from 'react-native-gesture-handler';
 
 
@@ -70,8 +82,38 @@ export default function App() {
   const [valor, setValor] = useState(3) ;
   const [modalOndeVivem, setModalOndeVivem] = useState(false);
   const [modalMaisComuns, setModalMaisComuns] = useState(false);
+  const [modalImportancia, setModalImportancia] = useState(false);
+  const [modalMaisInfoImportancia, setModalMaisInfoImportancia] = useState(false);
   const [valorIdOndeVivem, setValorIdOndeVivem] = useState(0);
   const [valorIdMaisComuns, setValorIdMaisComuns] = useState(0);
+  const [valorIdImportancia, setValorIdImportancia] = useState(0);
+  const [dadosII, setDadosII] = useState([
+    {
+      id: 0,
+      img: ecologicaS,
+      nome: 'Ecológica'
+    },
+    {
+      id: 1,
+      img: medicaS,
+      nome: 'Médica'
+    },
+    {
+      id: 2,
+      img: veterinariaS,
+      nome: 'Veterinária'
+    },
+    {
+      id: 3,
+      img: agricolaS,
+      nome: 'Agrícola'
+    },
+    {
+      id: 4,
+      img: forenseS,
+      nome: 'Forense'
+    },
+  ])
   const [dadosMC, setDadosMC] = useState(
     [
       {
@@ -283,7 +325,7 @@ export default function App() {
             setModalMaisInfo(false);
           }}>
             <View style={{flex: 1, backgroundColor: '#FFF'}}>
-            <View style={styles.headerModal}>
+            <View style={styles.headerModalReconhecer}>
               <View style={styles.boxTextHeaderModal}>
                 <TouchableOpacity style={styles.BoxbuttonBackModal}
                   onPress={() => {setModalMaisInfo(false)}}
@@ -376,7 +418,7 @@ export default function App() {
             setModalMaisInfoOndeVivem(false);
           }}>
             <View style={{flex: 1, backgroundColor: '#FFF'}}>
-            <View style={styles.headerModal}>
+            <View style={styles.headerModalOndeVivem}>
               <View style={styles.boxTextHeaderModal}>
                 <TouchableOpacity style={styles.BoxbuttonBackModal}
                   onPress={() => {setModalMaisInfoOndeVivem(false)}}
@@ -468,7 +510,7 @@ export default function App() {
             setModalMaisInfoComuns(false);
           }}>
             <View style={{flex: 1, backgroundColor: '#FFF'}}>
-            <View style={styles.headerModal}>
+            <View style={styles.headerModalMaisComuns}>
               <View style={styles.boxTextHeaderModal}>
                 <TouchableOpacity style={styles.BoxbuttonBackModal}
                   onPress={() => {setModalMaisInfoComuns(false)}}
@@ -549,6 +591,98 @@ export default function App() {
     );
   };
 
+  function modalMaisInfImportancia() {
+    return(
+      <View style={styles.boxModalReconhecer}>
+        <Modal
+          animationType="fade"
+          transparent={true}
+          visible={modalMaisInfoImportancia}
+          onRequestClose={() => {
+            setModalMaisInfoImportancia(false);
+          }}>
+            <View style={{flex: 1, backgroundColor: '#FFF'}}>
+            <View style={styles.headerModalImportancia}>
+              <View style={styles.boxTextHeaderModal}>
+                <TouchableOpacity style={styles.BoxbuttonBackModal}
+                  onPress={() => {setModalMaisInfoImportancia(false)}}
+                >
+                  <Image source={buttonLeft} style={styles.buttonBackModal} resizeMode='stretch'/>
+                </TouchableOpacity>
+                <Text style={styles.textHeaderModal}> Voltar </Text>
+              </View>
+            </View>
+              <ScrollView>
+              <View style={{backgroundColor: '#7EC24D', borderBottomLeftRadius: wp('7%'), borderBottomRightRadius: wp('7%')}}>
+                <Image source={dadosII[valorIdImportancia].img} style={{width: wp('100%'), height: hp('18%')}} resizeMode='stretch' />
+              </View>
+
+              <View style={{width: wp('100%'), alignItems: 'center', justifyContent: 'center'}}>
+                <View style={{width: wp('95%')}}>
+                <Text style={{textAlign: 'justify', fontSize: hp('2.3%'), paddingTop: hp('2%')}}>{textosReconhecer()}</Text>
+                </View>
+              </View>
+              <View
+                style={{width: wp('100%'), height: hp('0.2%'), backgroundColor: "#B3B3B3"}}
+                
+              />
+              
+              <View style={{marginTop: hp('1%')}}>
+                <View style={{alignItems: 'center', justifyContent: 'center'}}>
+                  <Text style={{fontSize: hp('3%'), color: 'green'}}>Exemplos de {dadosII[valorIdImportancia].nome}</Text>
+                </View>
+
+                <View>
+                 <View style={{alignContent: 'center', alignItems: 'center'}}>
+                   <ScrollView horizontal style={{marginTop:hp('2%'), paddingBottom: 10}}>                                
+                         
+                          <ZoomImage
+                          source={modelFundo}
+                          imgStyle={styles.imageModalCarrousel}
+                          style={styles.imageModalCarrousell}
+                          duration={200}
+                          enableScaling={false}
+                          />
+                          <ZoomImage
+                          source={modelFundo}
+                          imgStyle={styles.imageModalCarrousel}
+                          style={styles.imageModalCarrousell}
+                          duration={200}
+                          enableScaling={false}
+                          />
+                          <ZoomImage
+                          source={modelFundo}
+                          imgStyle={styles.imageModalCarrousel}
+                          style={styles.imageModalCarrousell}
+                          duration={200}
+                          enableScaling={false}
+                          />
+                          <ZoomImage
+                          source={modelFundo}
+                          imgStyle={styles.imageModalCarrousel}
+                          style={styles.imageModalCarrousell}
+                          duration={200}
+                          enableScaling={false}
+                          />
+                          <ZoomImage
+                          source={modelFundo}
+                          imgStyle={styles.imageModalCarrousel}
+                          style={styles.imageModalCarrousell}
+                          duration={200}
+                          enableScaling={false}
+                          />
+                  </ScrollView> 
+                </View>
+                </View>
+              </View>
+              </ScrollView>
+            
+            </View>       
+        </Modal>
+      </View>
+    );
+  };
+
 
   function ondeVivem() {
     return (
@@ -558,12 +692,12 @@ export default function App() {
       visible={modalOndeVivem}
       onRequestClose={() => {
         setModalOndeVivem(false);
-        StatusBar.setBackgroundColor('#A7CE03');
+        StatusBar.setBackgroundColor('#7EC24D');
       }}>
-         <View style={styles.headerModal}>
+         <View style={styles.headerModalOndeVivem}>
           <View style={styles.boxTextHeaderModal}>
                 <TouchableOpacity style={styles.BoxbuttonBackModal}
-                  onPress={() => {setModalOndeVivem(false), StatusBar.setBackgroundColor('#A7CE03');}}
+                  onPress={() => {setModalOndeVivem(false), StatusBar.setBackgroundColor('#7EC24D');}}
                  >
                    <Image source={buttonLeft} style={styles.buttonBackModal} resizeMode='stretch'/>
                  </TouchableOpacity>
@@ -650,12 +784,12 @@ export default function App() {
       visible={modalMaisComuns}
       onRequestClose={() => {
         setModalMaisComuns(false);
-        StatusBar.setBackgroundColor('#A7CE03');
+        StatusBar.setBackgroundColor('#7EC24D');
       }}>
-         <View style={styles.headerModal}>
+         <View style={styles.headerModalMaisComuns}>
           <View style={styles.boxTextHeaderModal}>
                 <TouchableOpacity style={styles.BoxbuttonBackModal}
-                  onPress={() => {setModalMaisComuns(false), StatusBar.setBackgroundColor('#A7CE03');}}
+                  onPress={() => {setModalMaisComuns(false), StatusBar.setBackgroundColor('#7EC24D');}}
                  >
                    <Image source={buttonLeft} style={styles.buttonBackModal} resizeMode='stretch'/>
                  </TouchableOpacity>
@@ -667,7 +801,7 @@ export default function App() {
         <View style={{justifyContent: 'center', alignItems: 'center', marginBottom: hp('2%'), height: hp('9%')}}>
           <View style={styles.headerCard}>
             <Image source={icon3} style={{width: wp('7%'), height: hp('5%')}} />
-            <Text style={{marginLeft: wp('1%') ,fontSize: hp('2.2%'), fontWeight: 'bold', color: '#19D92B'}}>Os insetos mais comuns?</Text>
+            <Text style={{marginLeft: wp('1%') ,fontSize: hp('2.2%'), fontWeight: 'bold', color: '#cc0066'}}>Os insetos mais comuns?</Text>
           </View>
         </View>
           <ScrollView>
@@ -849,6 +983,109 @@ export default function App() {
     )
   }
 
+  function importancia() {
+    return (
+      <Modal
+      animationType="fade"
+      transparent={true}
+      visible={modalImportancia}
+      onRequestClose={() => {
+        setModalMaisComuns(false);
+        StatusBar.setBackgroundColor('#7EC24D');
+      }}>
+         <View style={styles.headerModalImportancia}>
+          <View style={styles.boxTextHeaderModal}>
+                <TouchableOpacity style={styles.BoxbuttonBackModal}
+                  onPress={() => {setModalImportancia(false), StatusBar.setBackgroundColor('#7EC24D');}}
+                 >
+                   <Image source={buttonLeft} style={styles.buttonBackModal} resizeMode='stretch'/>
+                 </TouchableOpacity>
+             <Text style={styles.textHeaderModal}> Voltar </Text>
+          </View>
+        </View>
+
+        <ImageBackground source={fundo} style={{width: '100%', height: '100%'}}>
+        <View style={{justifyContent: 'center', alignItems: 'center', marginBottom: hp('2%'), height: hp('9%')}}>
+          <View style={styles.headerCard}>
+            <Image source={icon3} style={{width: wp('7%'), height: hp('5%')}} />
+            <Text style={{marginLeft: wp('1%') ,fontSize: hp('2.2%'), fontWeight: 'bold', color: '#A7CE03'}}>Qual a importância dos Insetos?</Text>
+          </View>
+        </View>
+          <ScrollView>
+            <View style={{justifyContent: 'center', alignItems: 'center', flex: 1, marginBottom: hp('10%')}}>
+              <View style={styles.boxMenu}>
+                <View style={styles.opcaoMenuVivem}>
+                  <View style={styles.boxInterno}>
+                    <TouchableOpacity style={styles.boxInterno}
+                      onPress={() => {setModalMaisInfoImportancia(true), setValorIdImportancia(0)}}
+                    >
+                    <View>
+                      <Image source={ecologicaP} style={styles.imgWater} resizeMode="stretch" />
+                    </View>
+                    </TouchableOpacity>
+                  </View>
+
+                </View>
+
+                <View style={styles.opcaoMenuVivem}>
+                  <View style={styles.boxInterno}>
+                    <TouchableOpacity style={styles.boxInterno}
+                      onPress={() => {setModalMaisInfoImportancia(true), setValorIdImportancia(1)}}
+                    >
+                      <View>
+                        <Image source={medicaP} style={styles.imgWater} resizeMode="stretch" />
+                      </View>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+
+                <View style={styles.opcaoMenuVivem}>
+                  <View style={styles.boxInterno}>
+                    <TouchableOpacity style={styles.boxInterno}
+                      onPress={() => {setModalMaisInfoImportancia(true), setValorIdImportancia(2)}}
+                    >
+                      <View>
+                        <Image source={veterinariaP} style={styles.imgWater} resizeMode="stretch" />
+                      </View>
+                    
+                    </TouchableOpacity>
+                  </View>
+                </View>
+
+
+                <View style={styles.opcaoMenuVivem}>
+                  <View style={styles.boxInterno}>
+                    <TouchableOpacity style={styles.boxInterno}
+                      onPress={() => {setModalMaisInfoImportancia(true), setValorIdImportancia(3)}}
+                    >
+
+                      <View>
+                        <Image source={agricolaP} style={styles.imgWater} resizeMode="stretch" />
+                      </View>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+
+                <View style={styles.opcaoMenuVivem}>
+                  <View style={styles.boxInterno}>
+                    <TouchableOpacity style={styles.boxInterno}
+                      onPress={() => {setModalMaisInfoImportancia(true), setValorIdImportancia(4)}}
+                    >
+
+                      <View>
+                        <Image source={forenseP} style={styles.imgWater} resizeMode="stretch" />
+                      </View>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </ScrollView>
+        </ImageBackground>
+      </Modal>
+    )
+  }
+
 
   function reconhecer() {
     return(
@@ -859,12 +1096,12 @@ export default function App() {
                   transparent={true}
                   onRequestClose={() => {
                       setModalVisibleInicial(false);
-                      StatusBar.setBackgroundColor('#A7CE03');
+                      StatusBar.setBackgroundColor('#7EC24D');
                   }}>
-                     <View style={styles.headerModal}>
+                     <View style={styles.headerModalReconhecer}>
                       <View style={styles.boxTextHeaderModal}>
                         <TouchableOpacity style={styles.BoxbuttonBackModal}
-                          onPress={() => {setModalVisibleInicial(false), StatusBar.setBackgroundColor('#A7CE03');}}
+                          onPress={() => {setModalVisibleInicial(false), StatusBar.setBackgroundColor('#7EC24D');}}
                         >
                            <Image source={buttonLeft} style={styles.buttonBackModal} resizeMode='stretch'/>
                         </TouchableOpacity>
@@ -916,7 +1153,7 @@ export default function App() {
   return (
     
     <View style={styles.box}>
-      <View style={{width: wp('0%'), height: hp('0%')}}>{reconhecer()}{modalMaisInfReconhecer()}{ondeVivem()}{modalMaisInfOndeVivem()}{maisComuns()}{modalMaisInfComuns()}</View>
+      <View style={{width: wp('0%'), height: hp('0%')}}>{reconhecer()}{modalMaisInfReconhecer()}{ondeVivem()}{modalMaisInfOndeVivem()}{maisComuns()}{modalMaisInfComuns()}{importancia()}{modalMaisInfImportancia()}</View>
          <ImageBackground source={fundo} style={{width: '100%', height: '100%'}}>
          
         <View style={styles.header}>
@@ -936,7 +1173,7 @@ export default function App() {
             <View style={styles.opcaoMenu}>
               <View style={styles.boxInterno}>
                 <TouchableOpacity style={styles.boxInterno}
-                  onPress={() => {setModalVisibleInicial(true), StatusBar.setBackgroundColor('#7EC24D')}}
+                  onPress={() => {setModalVisibleInicial(true), StatusBar.setBackgroundColor('#6456FF')}}
                 >
 
                   <View style={styles.boxIconOpcoes}>
@@ -981,7 +1218,7 @@ export default function App() {
             <View style={styles.opcaoMenu}>
               <View style={styles.boxInterno}>
                 <TouchableOpacity style={styles.boxInterno}
-                  onPress={() => {StatusBar.setBackgroundColor('#7EC24D'), setModalMaisComuns(true)}}
+                  onPress={() => {StatusBar.setBackgroundColor('#cc0066'), setModalMaisComuns(true)}}
                 >
 
                 <View style={styles.boxIconOpcoes}>
@@ -1004,7 +1241,7 @@ export default function App() {
             <View style={styles.opcaoMenu}>
               <View style={styles.boxInterno}>
                 <TouchableOpacity style={styles.boxInterno}
-                  onPress={() => {}}
+                  onPress={() => {StatusBar.setBackgroundColor('#A7CE03'), setModalImportancia(true)}}
                 >
 
                 <View style={styles.boxIconOpcoes}>
