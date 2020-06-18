@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, StatusBar, Text, View , YellowBox} from 'react-native';
 
 StatusBar.setBackgroundColor('#7EC24D');
-StatusBar.setBarStyle('dark-light');
+
 
 YellowBox.ignoreWarnings([
   'should never be nested inside plain',

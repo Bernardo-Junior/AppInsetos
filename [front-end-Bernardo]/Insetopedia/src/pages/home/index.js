@@ -692,12 +692,12 @@ export default function App() {
       visible={modalOndeVivem}
       onRequestClose={() => {
         setModalOndeVivem(false);
-        StatusBar.setBackgroundColor('#7EC24D');
+        StatusBar.setBackgroundColor('#7EC24D'), StatusBar.setBarStyle('dark-content');
       }}>
          <View style={styles.headerModalOndeVivem}>
           <View style={styles.boxTextHeaderModal}>
                 <TouchableOpacity style={styles.BoxbuttonBackModal}
-                  onPress={() => {setModalOndeVivem(false), StatusBar.setBackgroundColor('#7EC24D');}}
+                  onPress={() => {setModalOndeVivem(false), StatusBar.setBackgroundColor('#7EC24D'), StatusBar.setBarStyle('dark-content');}}
                  >
                    <Image source={buttonLeft} style={styles.buttonBackModal} resizeMode='stretch'/>
                  </TouchableOpacity>
@@ -784,12 +784,12 @@ export default function App() {
       visible={modalMaisComuns}
       onRequestClose={() => {
         setModalMaisComuns(false);
-        StatusBar.setBackgroundColor('#7EC24D');
+        StatusBar.setBackgroundColor('#7EC24D'), StatusBar.setBarStyle('dark-content');
       }}>
          <View style={styles.headerModalMaisComuns}>
           <View style={styles.boxTextHeaderModal}>
                 <TouchableOpacity style={styles.BoxbuttonBackModal}
-                  onPress={() => {setModalMaisComuns(false), StatusBar.setBackgroundColor('#7EC24D');}}
+                  onPress={() => {setModalMaisComuns(false), StatusBar.setBackgroundColor('#7EC24D'), StatusBar.setBarStyle('dark-content');}}
                  >
                    <Image source={buttonLeft} style={styles.buttonBackModal} resizeMode='stretch'/>
                  </TouchableOpacity>
@@ -990,13 +990,13 @@ export default function App() {
       transparent={true}
       visible={modalImportancia}
       onRequestClose={() => {
-        setModalMaisComuns(false);
-        StatusBar.setBackgroundColor('#7EC24D');
+        setModalImportancia(false);
+        StatusBar.setBackgroundColor('#7EC24D'), StatusBar.setBarStyle('dark-content');
       }}>
          <View style={styles.headerModalImportancia}>
           <View style={styles.boxTextHeaderModal}>
                 <TouchableOpacity style={styles.BoxbuttonBackModal}
-                  onPress={() => {setModalImportancia(false), StatusBar.setBackgroundColor('#7EC24D');}}
+                  onPress={() => {setModalImportancia(false), StatusBar.setBackgroundColor('#7EC24D'), StatusBar.setBarStyle('dark-content');}}
                  >
                    <Image source={buttonLeft} style={styles.buttonBackModal} resizeMode='stretch'/>
                  </TouchableOpacity>
@@ -1008,7 +1008,7 @@ export default function App() {
         <View style={{justifyContent: 'center', alignItems: 'center', marginBottom: hp('2%'), height: hp('9%')}}>
           <View style={styles.headerCard}>
             <Image source={icon3} style={{width: wp('7%'), height: hp('5%')}} />
-            <Text style={{marginLeft: wp('1%') ,fontSize: hp('2.2%'), fontWeight: 'bold', color: '#A7CE03'}}>Qual a importância dos Insetos?</Text>
+            <Text style={{marginLeft: wp('1%') ,fontSize: hp('2.2%'), fontWeight: 'bold', color: 'orange'}}>Qual a importância dos Insetos?</Text>
           </View>
         </View>
           <ScrollView>
@@ -1096,12 +1096,12 @@ export default function App() {
                   transparent={true}
                   onRequestClose={() => {
                       setModalVisibleInicial(false);
-                      StatusBar.setBackgroundColor('#7EC24D');
+                      StatusBar.setBackgroundColor('#7EC24D'), StatusBar.setBarStyle('dark-content');
                   }}>
                      <View style={styles.headerModalReconhecer}>
                       <View style={styles.boxTextHeaderModal}>
                         <TouchableOpacity style={styles.BoxbuttonBackModal}
-                          onPress={() => {setModalVisibleInicial(false), StatusBar.setBackgroundColor('#7EC24D');}}
+                          onPress={() => {setModalVisibleInicial(false), StatusBar.setBarStyle('dark-content'), StatusBar.setBackgroundColor('#7EC24D');}}
                         >
                            <Image source={buttonLeft} style={styles.buttonBackModal} resizeMode='stretch'/>
                         </TouchableOpacity>
@@ -1149,13 +1149,12 @@ export default function App() {
       </View>
     );
   };
-  
+
   return (
     
     <View style={styles.box}>
       <View style={{width: wp('0%'), height: hp('0%')}}>{reconhecer()}{modalMaisInfReconhecer()}{ondeVivem()}{modalMaisInfOndeVivem()}{maisComuns()}{modalMaisInfComuns()}{importancia()}{modalMaisInfImportancia()}</View>
          <ImageBackground source={fundo} style={{width: '100%', height: '100%'}}>
-         
         <View style={styles.header}>
            <View style={styles.boxTextHeader}>
                <Text style={styles.textHeader}>Seja bem-vindo(a)</Text>
@@ -1173,7 +1172,7 @@ export default function App() {
             <View style={styles.opcaoMenu}>
               <View style={styles.boxInterno}>
                 <TouchableOpacity style={styles.boxInterno}
-                  onPress={() => {setModalVisibleInicial(true), StatusBar.setBackgroundColor('#6456FF')}}
+                  onPress={() => {setModalVisibleInicial(true), StatusBar.setBarStyle('dark-light'),StatusBar.setBackgroundColor('#6456FF')}}
                 >
 
                   <View style={styles.boxIconOpcoes}>
@@ -1196,7 +1195,7 @@ export default function App() {
             <View style={styles.opcaoMenu}>
               <View style={styles.boxInterno}>
                 <TouchableOpacity style={styles.boxInterno}
-                  onPress={() => {StatusBar.setBackgroundColor('#7EC24D'), setModalOndeVivem(true)}}
+                  onPress={() => {StatusBar.setBackgroundColor('#7EC24D'), StatusBar.setBarStyle('dark-light'), setModalOndeVivem(true)}}
                 >
 
                 <View style={styles.boxIconOpcoes}>
@@ -1218,7 +1217,7 @@ export default function App() {
             <View style={styles.opcaoMenu}>
               <View style={styles.boxInterno}>
                 <TouchableOpacity style={styles.boxInterno}
-                  onPress={() => {StatusBar.setBackgroundColor('#cc0066'), setModalMaisComuns(true)}}
+                  onPress={() => {StatusBar.setBackgroundColor('#cc0066'), StatusBar.setBarStyle('dark-light'), setModalMaisComuns(true)}}
                 >
 
                 <View style={styles.boxIconOpcoes}>
@@ -1241,7 +1240,7 @@ export default function App() {
             <View style={styles.opcaoMenu}>
               <View style={styles.boxInterno}>
                 <TouchableOpacity style={styles.boxInterno}
-                  onPress={() => {StatusBar.setBackgroundColor('#A7CE03'), setModalImportancia(true)}}
+                  onPress={() => {StatusBar.setBackgroundColor('orange'), StatusBar.setBarStyle('dark-content'), setModalImportancia(true)}}
                 >
 
                 <View style={styles.boxIconOpcoes}>

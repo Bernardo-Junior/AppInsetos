@@ -38,7 +38,7 @@ export default StyleSheet.create({
     },
     headerModalImportancia: {
         height: hp('8%'),
-        backgroundColor: '#A7CE03',
+        backgroundColor: 'orange',
         justifyContent: 'center',
     },
     boxTextHeaderModal: {
