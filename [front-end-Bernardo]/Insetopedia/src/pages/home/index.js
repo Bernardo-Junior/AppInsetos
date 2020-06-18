@@ -363,6 +363,7 @@ export default function App() {
       </View>
     );
   };
+ 
 
   function modalMaisInfOndeVivem() {
     return(
