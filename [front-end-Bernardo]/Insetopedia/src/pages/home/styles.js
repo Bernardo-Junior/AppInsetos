@@ -166,7 +166,6 @@ export default StyleSheet.create({
         height: hp('8%'),
         backgroundColor: '#FFF',
         borderRadius: wp('2%'),
-        marginTop: hp('4%'),
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center'

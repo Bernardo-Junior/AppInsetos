@@ -7,7 +7,7 @@ import {
     removeOrientationListener as rol
 } from 'react-native-responsive-screen';
 import Carousel from 'react-native-snap-carousel';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, FontAwesome5 } from '@expo/vector-icons';
 import ZoomImage from 'react-native-zoom-image';
 
 import styles from './styles';
@@ -295,7 +295,7 @@ export default function App() {
 
   function _renderItem({item, index}) {
     return (
-        <ImageBackground imageStyle = {{borderRadius :  wp('5%') }} source={item.cards} style={{justifyContent: 'flex-end', width: wp('85%'), height: hp('60%'), alignItems: 'center', marginTop: hp('5%'),}}>
+        <ImageBackground imageStyle = {{borderRadius :  wp('5%') }} source={item.cards} style={{justifyContent: 'flex-end', width: wp('85%'), height: hp('55%'), alignItems: 'center', marginTop: hp('8%'),}}>
             <View  style={{width: wp('85%'), borderBottomRightRadius: wp('5%'),  borderBottomLeftRadius: wp('5%'), backgroundColor:'rgba(50,0,0,0.5)',}}>
               <View style={{marginLeft: wp('5%'), marginBottom: hp('3%')}}>
                 <View>
@@ -1129,14 +1129,14 @@ export default function App() {
                       />
                       </View>
                       <View style={{justifyContent: 'center', alignItems: 'center', width: wp('100%'), position:'absolute', }}>
-                        <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', width: wp('100%'),marginBottom: hp('5%')}}>
+                        <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', width: wp('100%'),marginBottom: hp('4%')}}>
                           <TouchableOpacity style={{marginLeft: wp('1%'), width: wp('10%')}} onPress={() => {carousel.snapToPrev();}}>
                           {/* <Image source={buttonLeft} style={{width: wp('6%'), height: hp('4.5%')}}/> */}
-                            <Ionicons name="ios-arrow-back" size={50} color="#FFF" />
+                            <FontAwesome5 name="angle-left" size={50} color="#FFF" />
                           </TouchableOpacity> 
                           <TouchableOpacity  style={{marginRight: wp('1%') ,alignItems: 'flex-end', width: wp('10%')}} onPress={() => {carousel.snapToNext();}}>
                           {/* <Image source={buttonRight} style={{width: wp('6%'), height: hp('4.5%')}}/> */}
-                            <Ionicons name="ios-arrow-forward" size={50} color="#FFF" />
+                            <FontAwesome5 name="angle-right" size={50} color="#FFF" />
                           </TouchableOpacity> 
                         </View>
                       </View>
