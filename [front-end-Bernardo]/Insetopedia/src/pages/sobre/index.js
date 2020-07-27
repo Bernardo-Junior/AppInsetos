@@ -33,11 +33,12 @@ export default function Home() {
         })
     }
     return (
-        <View style={styles.body} >
+        <>
+        <SafeAreaView style={styles.body}>
                 <View style={styles.header}>
                     <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                        <Image source={headerIcon} style={styles.imagemHeader} resizeMode="stretch" />
-                        </View>
+                        <Text style={{fontSize: hp('2.5%'), color: '#FFF', fontWeight: 'bold'}}>Sobre o Insetopédia</Text>
+                    </View>
                 </View>
                 <ScrollView>
                 <View style={styles.box1}>
@@ -136,6 +137,7 @@ export default function Home() {
 
                 </ScrollView>
                 
-        </View>
+        </SafeAreaView>
+        </>
     )
 }

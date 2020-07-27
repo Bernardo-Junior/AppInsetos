@@ -52,7 +52,8 @@ export default StyleSheet.create({
     textHeader: {
         paddingHorizontal: 24,
         fontSize: hp('2.5%'),
-        color: '#FFF'
+        color: '#FFF', 
+        fontWeight: 'bold'
     },
     textHeaderModal: {
         paddingHorizontal: 5,

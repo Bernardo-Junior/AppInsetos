@@ -14,7 +14,8 @@ export default StyleSheet.create({
     },
     header:{
         height: hp('11%'),
-        backgroundColor: '#7EC24D'
+        backgroundColor: '#7EC24D',
+        paddingTop: Constants.statusBarHeight + 20,
      },
     imagemHeader:{
         width: wp('55%'), 
