@@ -22,7 +22,7 @@ import arrow2 from '../../icones/2-icones/arrow-right2.png';
 import arrow3 from '../../icones/2-icones/arrow-right3.png';
 import arrow4 from '../../icones/2-icones/arrow-right4.png';
 
-import backgroundModal from '../../icones/4-backgrounds/background-shadow.png';
+import backgroundModal from '../../icones/4-backgrounds/background.png';
 
 import buttonLeft from '../../icones/2-icones/arrow-left1.png';
 
