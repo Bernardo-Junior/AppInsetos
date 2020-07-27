@@ -142,7 +142,7 @@ export default StyleSheet.create({
         marginTop: hp('3%')
     },
     imageConheca: {
-        width: wp('40%'), 
+        width: wp('30%'), 
         height: hp('2.8%')
     },
     boxImage312: {
