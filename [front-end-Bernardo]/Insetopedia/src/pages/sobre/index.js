@@ -20,14 +20,14 @@ import styles from './style';
 export default function Home() {
     function sendEmailOdette() {
         MailComposer.composeAsync({
-            subject: 'Amazonas Cult App',
+            subject: 'Insetopédia App',
             recipients: ['odette@ufam.edu.br'],
             body: "",
         })
     }
     function sendEmailRainner() {
         MailComposer.composeAsync({
-            subject: 'Amazonas Cult App',
+            subject: 'Insetopédia App',
             recipients: ['raineramorim@ufam.edu.br'],
             body: "",
         })
@@ -66,8 +66,7 @@ export default function Home() {
                 <View style={styles.box1TextSobre}>
                 <View style={styles.box2TextSobre}>
                     <Text style={styles.textSobre}>
-                        O Amazonas Cult é um aplicativo com o intuito de apresentar as informações dos diversos eventos culturais do Amazonas, 
-                        mostrando o quanto nosso estado é grandioso em relação a festas populares nas suas mais diversidades regiões
+                        O Insetopédia é um aplicativo para crianças e adolescentes aprenderem sobre os insetos, aonde encontrá-los, como eles são, quais são e assim por diante
                     </Text>
                 </View> 
                 </View>
@@ -85,7 +84,7 @@ export default function Home() {
                 <View style={styles.box2TextEquipe}>
                     <Text style={styles.textEquipe}>
                         Este aplicativo foi desenvolvido no âmbito do Instituto de Ciências Exatas e Tecnologia (ICET) da Universidade Federal do Amazonas (UFAM)
-                        pelos alunos Bernardo Junior, Maik Elamide e Victor Froes e coordenado pelos professores Odette Passos e Rainer Amorim, como parte das atividades desenvolvidas
+                        pelos alunos Bernardo Junior, Maik Elamide e Mateus Caldas e coordenado pelos professores Odette Passos e Rainer Amorim, como parte das atividades desenvolvidas
                         no Laboratório de Pesquisa em Computação I <Text style={{fontWeight: 'bold'}}>(#LAB312)</Text>
                     </Text>
                     <Text style={styles.textEmail}>
