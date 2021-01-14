@@ -44,7 +44,13 @@ Ferramentas utilizadas nesse projeto:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars2.githubusercontent.com/u/37701153?s=400&u=a0a7ce9fb7d78b087efe31ff05cd2978cd0dd6a2&v=4" width="100px;" alt="Foto do Gustavo Marques no github"/><br>
+        <img src="https://avatars2.githubusercontent.com/u/37701153?s=400&u=a0a7ce9fb7d78b087efe31ff05cd2978cd0dd6a2&v=4" width="100px;" alt="Foto do Bernardo Junior no github"/><br>
+        <sub>
+          <b>Bernardo Junior</b>
+        </sub>
+      </a>
+        <a href="#">
+        <img src="https://avatars3.githubusercontent.com/u/46079277?s=400&u=f6d5ea0014c9db5583934f2a092ae44dd05edca4&v=4" width="100px;" alt="Foto do Maik Elamide no github"/><br>
         <sub>
           <b>Bernardo Junior</b>
         </sub>
