@@ -49,11 +49,14 @@ Ferramentas utilizadas nesse projeto:
           <b>Bernardo Junior</b>
         </sub>
       </a>
+        <td/>
+      <td align="center">
         <a href="#">
         <img src="https://avatars3.githubusercontent.com/u/46079277?s=400&u=f6d5ea0014c9db5583934f2a092ae44dd05edca4&v=4" width="100px;" alt="Foto do Maik Elamide no github"/><br>
         <sub>
           <b>Bernardo Junior</b>
         </sub>
       </a>
+      </td>
  </table>
 
