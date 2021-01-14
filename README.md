@@ -20,7 +20,9 @@ O aplicativo foi feito com intuito de ajudar no aprendizado de crianças e adole
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-
+- [React Native](https://reactnative.dev/)
+- [NodeJS](https://nodejs.org/en/)
+- [MongoDB](https://www.mongodb.com/)
 - [React Router](https://reactrouter.com/web/guides/quick-start)
 - [Axios](https://github.com/axios/axios)
 - [Npm](https://www.npmjs.com/)
