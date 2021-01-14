@@ -38,3 +38,16 @@ Ferramentas utilizadas nesse projeto:
 ---
 
 
+## 🤝 Colaboradores
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars2.githubusercontent.com/u/37701153?s=400&u=a0a7ce9fb7d78b087efe31ff05cd2978cd0dd6a2&v=4" width="100px;" alt="Foto do Gustavo Marques no github"/><br>
+        <sub>
+          <b>Gustavo Marques</b>
+        </sub>
+      </a>
+ </table>
+
