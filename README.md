@@ -58,5 +58,14 @@ Ferramentas utilizadas nesse projeto:
         </sub>
       </a>
       </td>
+      <td align="center">
+        <a href="#">
+        <img src="https://avatars0.githubusercontent.com/u/52256448?s=400&v=4" width="100px;" alt="Foto do Mateus Caldas no github"/><br>
+        <sub>
+          <b>Mateus Caldas</b>
+        </sub>
+      </a>
+      </td>
+      
  </table>
 
