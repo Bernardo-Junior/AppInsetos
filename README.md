@@ -1,6 +1,8 @@
 <h1 align="center">
     <tittle>Insetopédia</tittle>
 <h1 >
+ <img src="https://raw.githubusercontent.com/Bernardo-Junior/AppInsetos/master/%5Bdesign-maik-elamide%5D/3-logo/insetopedia.png" alt="exemplo imagem">   
+    
 
 
 ## 💬️ Sobre o projeto
